@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  margin-bottom: 20px;
+}
+*{
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+.topic{
+  width: 400px;
+  height: 40px;
+  background-color: rgb(60, 59, 59);
+  margin: 10px;
+}
+.note{
+  width: 700px;
+  height: 45px;
+  font-size: 16px;
+  background-color: rgb(60, 59, 59);
+  margin: 10px;
+}
+.lable{
+  font-size: 22px;
+  margin-right: 5px;
+  color: rgb(255, 255, 255);
+}
+.button{
+  color: rgb(255, 255, 255);
+  background-color: rgb(4, 104, 225);
+  width: 130px;
+  height: 40px;
+  border-radius: 10px ;
+  font-weight: 600;
+  font-size: 16px;
+}
+.button:hover{
+  background-color: rgb(255, 29, 202);
+  width: 160px;
+  transition: 1s;
+
+}
+.card{
+  background-color: #1d1d1d;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  padding: 10px 10px ;
+  border-radius: 10px;
+  margin-right: 100px;
+  border: 3px solid rgb(106, 153, 255);
+  padding-bottom: 20px;
+}
+.maptopic{
+  background-color: rgba(0, 255, 255, 0);
+  color: rgb(0, 229, 241);
+}
+.maptime{
+  background-color: rgba(250, 235, 215, 0);
+}
+.mapnote{
+  background-color: rgba(0, 255, 255, 0);
+  color: rgb(229, 255, 245);
+}
+.pre{
+  background-color: #1d1d1d00;
+}
+.box1{
+  display: flex;
+}
+.bbn{
+  color: rgb(255, 255, 255);
+  background-color: rgb(4, 104, 225);
+  width: 130px;
+  height: 40px;
+  border-radius: 10px ;
+  font-weight: 600;
+  font-size: 16px;
+}
+.delete{
+  background-color: rgb(225, 2, 50);
+  margin-right: 10px;
+}
+.edit{
+  background-color: rgb(204, 88, 239);
+  margin-right: 10px;
+
+}
+.done{
+  background-color: rgb(19, 159, 0);
+}
+.status {
+  text-decoration: line-through;
+  background-color: #1d1d1d00;
+}
+.statusb {
+  text-decoration: line-through;
+  background-color: #1d1d1d00;
+  color: rgb(0, 229, 241);
+}
