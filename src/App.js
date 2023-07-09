@@ -27,15 +27,31 @@ function dates(){
 }
   const handelsubmit=(e)=>{
     e.preventDefault()
-    
     const newobj={topic,note,date,time,state}
     setlist([...list,newobj])
+    saveToLocalStorage(list);
     console.log(list)
     setnote('')
     settopic('')
     setstate(false)
   
   }
+
+  
+  const saveToLocalStorage = (data) => {
+    localStorage.setItem('todoList', JSON.stringify(data));
+  };
+
+  const retrieveFromLocalStorage = () => {
+    const data = localStorage.getItem('todoList');
+    if (data) {
+      setlist(JSON.parse(data));
+    }
+  };
+
+  useEffect(() => {
+    retrieveFromLocalStorage();
+  }, []);
 
 useEffect(()=>{
 
@@ -48,19 +64,21 @@ useEffect(()=>{
     const updatedUsers = [...list];
     updatedUsers.splice(index, 1);
     setlist(updatedUsers);
+    saveToLocalStorage(updatedUsers);
   }
   const editlst =(index)=>{
     setEditIndex(index);
     const updatedList = [...list];
     updatedList[index].note = note;
     setlist(updatedList)
+    saveToLocalStorage(updatedList);
     setnote('')
   }
   const donelst = (index) => {
     const updatedList = [...list];
     updatedList[index].state = true;
     setlist(updatedList);
-    
+     saveToLocalStorage(updatedList);
   };
   return (
 
